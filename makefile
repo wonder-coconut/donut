@@ -1,2 +1,2 @@
 donut : donut.c
-	gcc donut.c -o donut -lm
+	gcc donut.c -o donut.o -lm
