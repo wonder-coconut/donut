@@ -1,9 +1,14 @@
 include config.mk
 
+OBJECTS = donut.o
+
 all : donut
 
-donut : donut.c
-	gcc donut.c -o donut -lm
+donut.o :
+	$(CC) $(CFLAGS) -c donut.c
+donut : $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o donut $(LDFLAGS)
+
 
 install : donut
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
