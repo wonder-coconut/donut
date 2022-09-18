@@ -1,4 +1,4 @@
 CC = gcc
-PREFIX = /usr/local
+PREFIX = /usr
 CFLAGS = -Wall
 LDFLAGS = -lm
