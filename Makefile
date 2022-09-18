@@ -7,7 +7,7 @@ all : donut
 donut.o :
 	$(CC) $(CFLAGS) -c donut.c
 donut : $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o donut $(LDFLAGS)
+	$(CC) $(CFLAGS) $(RELROFLAGS) $(OBJECTS) -o donut $(LDFLAGS)
 
 
 install : donut
